@@ -1,0 +1,43 @@
+.rules-modal {
+  max-width: 700px;
+}
+
+.rules-modal .modal-header h2 {
+  color: var(--the-voice-red);
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.rules-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.rules-list li {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  padding-left: 30px;
+}
+
+.rules-list li:last-child {
+  border-bottom: none;
+}
+
+.rules-list li::before {
+  content: "🎤";
+  position: absolute;
+  left: 0;
+  top: 12px;
+}
+
+.rules-modal .modal-footer {
+  margin-top: 20px;
+}
+
+.rules-modal .modal-footer button {
+  background-color: var(--the-voice-gold);
+  color: var(--the-voice-black);
+  font-weight: 600;
+  padding: 12px 30px;
+}

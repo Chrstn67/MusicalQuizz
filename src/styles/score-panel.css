@@ -1,0 +1,174 @@
+.score-panel {
+  background: var(--gradient-panel);
+  border-radius: var(--border-radius);
+  margin-bottom: 1.5rem;
+  box-shadow: var(--box-shadow);
+  border: 2px solid var(--the-voice-red);
+  overflow: hidden;
+  animation: fadeIn 0.3s ease;
+}
+
+.score-panel-header {
+  background: var(--gradient-red);
+  padding: 0.7rem 1rem;
+  text-align: center;
+  position: relative;
+}
+
+.score-panel-header h3 {
+  margin: 0;
+  color: white;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.score-panel-content {
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.team-score-item {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: var(--border-radius-sm);
+  padding: 0.8rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 250px;
+  max-width: 100%;
+}
+
+.team-score-item.leading {
+  background: linear-gradient(
+    135deg,
+    rgba(230, 30, 37, 0.15) 0%,
+    rgba(212, 175, 55, 0.15) 100%
+  );
+  border: 1px solid var(--the-voice-gold);
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+  transform: scale(1.05);
+  z-index: 1;
+}
+
+@keyframes chairSpin {
+  0% {
+    transform: perspective(200px) rotateX(-10deg) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(200px) rotateX(-10deg) rotateY(180deg);
+  }
+}
+
+.team-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  text-align: center;
+}
+
+.team-score-name {
+  font-weight: 600;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.9rem;
+  width: 100%;
+  text-align: center;
+}
+
+.team-score-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.score-btn {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: all 0.2s ease;
+  padding: 0;
+  line-height: 1;
+}
+
+.score-btn.minus {
+  background-color: rgba(244, 67, 54, 0.2);
+  color: #f44336;
+  border: 1px solid #f44336;
+}
+
+.score-btn.plus {
+  background-color: rgba(76, 175, 80, 0.2);
+  color: #4caf50;
+  border: 1px solid #4caf50;
+}
+
+.score-btn:hover {
+  transform: scale(1.1);
+}
+
+.team-score-value {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--the-voice-gold);
+  min-width: 30px;
+  text-align: center;
+}
+
+.leader-crown {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  filter: drop-shadow(0 0 3px rgba(212, 175, 55, 0.5));
+  animation: float 2s infinite alternate;
+}
+
+@media (max-width: 768px) {
+  .team-score-item {
+    width: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .score-panel-content {
+    padding: 0.8rem;
+  }
+
+  .team-score-item {
+    padding: 0.6rem 0.8rem;
+    width: 100%;
+  }
+
+  .team-score-name {
+    font-size: 0.85rem;
+  }
+
+  .team-score-value {
+    font-size: 1.1rem;
+  }
+
+  .score-btn {
+    width: 22px;
+    height: 22px;
+    font-size: 0.9rem;
+  }
+}

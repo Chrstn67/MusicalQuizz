@@ -1,0 +1,317 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap");
+
+:root {
+  /* Palette de couleurs principale */
+  --the-voice-red: #e61e25;
+  --the-voice-dark-red: #c41017;
+  --the-voice-gold: #d4af37;
+  --the-voice-dark-gold: #b8941e;
+  --the-voice-black: #0a0a0a;
+  --the-voice-dark-gray: #1a1a1a;
+  --the-voice-gray: #333333;
+  --the-voice-light-gray: #555555;
+  --the-voice-white: #ffffff;
+
+  /* Couleurs fonctionnelles */
+  --correct-color: #4caf50;
+  --correct-bg: rgba(76, 175, 80, 0.15);
+  --incorrect-color: #f44336;
+  --incorrect-bg: rgba(244, 67, 54, 0.15);
+
+  /* Éléments d'interface */
+  --border-radius-sm: 6px;
+  --border-radius: 12px;
+  --border-radius-lg: 20px;
+  --box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+  /* Dégradés */
+  --gradient-red: linear-gradient(135deg, var(--the-voice-red) 0%, var(--the-voice-dark-red) 100%);
+  --gradient-gold: linear-gradient(135deg, var(--the-voice-gold) 0%, var(--the-voice-dark-gold) 100%);
+  --gradient-dark: linear-gradient(135deg, var(--the-voice-dark-gray) 0%, var(--the-voice-black) 100%);
+  --gradient-panel: linear-gradient(135deg, rgba(26, 26, 26, 0.9) 0%, rgba(10, 10, 10, 0.95) 100%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--the-voice-black);
+  color: var(--the-voice-white);
+  line-height: 1.6;
+  overflow-x: hidden;
+  background-image: radial-gradient(circle at 20% 30%, rgba(230, 30, 37, 0.05) 0%, transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(212, 175, 55, 0.05) 0%, transparent 40%),
+    url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e61e25' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+button {
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 12px 24px;
+  transition: var(--transition);
+  background: var(--gradient-red);
+  color: var(--the-voice-white);
+  box-shadow: 0 4px 8px rgba(230, 30, 37, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: all 0.5s ease;
+}
+
+button:hover::before {
+  left: 100%;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(230, 30, 37, 0.4);
+}
+
+button:active {
+  transform: translateY(-1px);
+}
+
+button:disabled {
+  background: var(--the-voice-gray);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+  opacity: 0.7;
+}
+
+input {
+  font-family: "Montserrat", sans-serif;
+  padding: 12px 15px;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--the-voice-gray);
+  background-color: rgba(26, 26, 26, 0.8);
+  color: var(--the-voice-white);
+  transition: var(--transition);
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--the-voice-gold);
+  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.3);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 800;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.modal {
+  background: var(--gradient-dark);
+  border-radius: var(--border-radius);
+  padding: 30px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: var(--box-shadow);
+  border: 2px solid var(--the-voice-red);
+  animation: modalAppear 0.5s ease;
+}
+
+.modal-header {
+  margin-bottom: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.modal-header::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: var(--gradient-red);
+  margin: 15px auto 0;
+  border-radius: 3px;
+}
+
+.modal-content {
+  margin-bottom: 20px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: center;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: var(--the-voice-white);
+  cursor: pointer;
+  box-shadow: none;
+}
+
+.close-button:hover {
+  color: var(--the-voice-red);
+  transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes spotlight {
+  0% {
+    box-shadow: 0 0 10px 5px rgba(230, 30, 37, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px 10px rgba(230, 30, 37, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 10px 5px rgba(230, 30, 37, 0.3);
+  }
+}
+
+@keyframes modalAppear {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes wave {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .modal {
+    padding: 20px;
+    width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 12px;
+  }
+
+  button {
+    padding: 10px 16px;
+  }
+}

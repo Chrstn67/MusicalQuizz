@@ -1,0 +1,31 @@
+.music-notes {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.music-notes canvas {
+  filter: drop-shadow(0 0 5px rgba(230, 30, 37, 0.3));
+}
+
+/* Enhanced note animations */
+@keyframes floatNote {
+  0% {
+    opacity: 0;
+    transform: translateY(100%) rotate(0deg);
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100%) rotate(360deg);
+  }
+}

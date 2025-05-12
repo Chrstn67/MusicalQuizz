@@ -1,0 +1,111 @@
+.progress-container {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: rgba(51, 51, 51, 0.5);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.progress-bar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 10px,
+    rgba(0, 0, 0, 0.1) 10px,
+    rgba(0, 0, 0, 0.1) 20px
+  );
+  z-index: 1;
+}
+
+.progress {
+  height: 100%;
+  background: linear-gradient(90deg, var(--the-voice-red) 0%, var(--the-voice-gold) 100%);
+  border-radius: 10px;
+  transition: width 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  position: relative;
+  z-index: 2;
+}
+
+.progress::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.2) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0.2) 75%,
+    transparent 75%,
+    transparent
+  );
+  background-size: 20px 20px;
+  animation: progressStripes 1s linear infinite;
+  border-radius: 10px;
+}
+
+.progress-indicator {
+  position: absolute;
+  top: -25px;
+  right: 0;
+  transform: translateX(50%);
+  background-color: var(--the-voice-red);
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.progress-indicator::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid var(--the-voice-red);
+}
+
+@keyframes progressStripes {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 20px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .progress-bar {
+    height: 8px;
+  }
+
+  .progress-indicator {
+    top: -22px;
+    font-size: 0.7rem;
+    padding: 0.2rem 0.6rem;
+  }
+}

@@ -1,0 +1,97 @@
+.team-setup-modal {
+  max-width: 600px;
+}
+
+.team-setup-modal .modal-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.team-setup-modal .modal-header h2 {
+  color: var(--the-voice-red);
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.team-setup {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.teams-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.team-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--the-voice-black);
+  padding: 15px;
+  border-radius: var(--border-radius);
+  border-left: 4px solid var(--the-voice-red);
+  animation: fadeIn 0.4s ease;
+}
+
+.team-item input {
+  flex: 1;
+  padding: 10px 15px;
+  border: 1px solid var(--the-voice-dark-gray);
+  border-radius: var(--border-radius);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--the-voice-white);
+  font-size: 1rem;
+}
+
+.team-item input:focus {
+  outline: none;
+  border-color: var(--the-voice-gold);
+}
+
+.remove-team {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(244, 67, 54, 0.2);
+  color: #f44336;
+  font-size: 1.2rem;
+  padding: 0;
+}
+
+.remove-team:hover {
+  background-color: rgba(244, 67, 54, 0.4);
+}
+
+.add-team-button {
+  background-color: transparent;
+  border: 2px dashed var(--the-voice-gold);
+  color: var(--the-voice-gold);
+  padding: 12px;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.add-team-button:hover {
+  background-color: rgba(212, 175, 55, 0.1);
+}
+
+.team-setup-modal .modal-footer {
+  margin-top: 30px;
+}
+
+.team-setup-modal .modal-footer button.accent {
+  background-color: var(--the-voice-red);
+  color: var(--the-voice-white);
+  font-weight: 700;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
