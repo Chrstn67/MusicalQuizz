@@ -76,17 +76,18 @@ export const quizData = {
         },
         {
           id: 5,
-          question: "Qui a chanté 'Stay' en 2021 ?",
+          question:
+            "Complétez les paroles de 'Blinding Lights' de The Weeknd : 'I said, ooh, I'm blinded by the lights, No, I can't sleep until I feel your ______'",
           type: "text",
           options: [
-            { id: "a", text: "Dua Lipa" },
-            { id: "b", text: "Justin Bieber" },
-            { id: "c", text: "The Kid LAROI" },
-            { id: "d", text: "The Kid LAROI et Justin Bieber" },
+            { id: "a", text: "touch" },
+            { id: "b", text: "love" },
+            { id: "c", text: "hand" },
+            { id: "d", text: "heart" },
           ],
-          correctAnswer: "d",
+          correctAnswer: "a",
           explanation:
-            "C'était The Kid LAROI en collaboration avec Justin Bieber sur la chanson 'Stay'.",
+            "La réponse correcte est 'touch'. La chanson 'Blinding Lights' est un énorme succès de The Weeknd sorti en 2020.",
         },
         {
           id: 6,
@@ -147,17 +148,18 @@ export const quizData = {
         },
         {
           id: 10,
-          question: "Quel groupe a sorti la chanson 'Stressed Out' en 2015 ?",
+          question:
+            "Complétez les paroles de 'Dance Monkey' de Tones and I : 'They say, oh my God, I see the way you shine, Take your hand, my dear, and place them both in ______'",
           type: "text",
           options: [
-            { id: "a", text: "Imagine Dragons" },
-            { id: "b", text: "Fall Out Boy" },
-            { id: "c", text: "Twenty One Pilots" },
-            { id: "d", text: "Panic! At The Disco" },
+            { id: "a", text: "yours" },
+            { id: "b", text: "mine" },
+            { id: "c", text: "the air" },
+            { id: "d", text: "my heart" },
           ],
-          correctAnswer: "c",
+          correctAnswer: "b",
           explanation:
-            "Twenty One Pilots a sorti 'Stressed Out' en 2015, qui est devenu l'un de leurs plus grands succès.",
+            "La réponse correcte est 'mine'. La chanson 'Dance Monkey' est un énorme succès de Tones and I sorti en 2019.",
         },
         {
           id: 11,
@@ -217,17 +219,18 @@ export const quizData = {
         },
         {
           id: 15,
-          question: "Quel artiste a sorti l'album 'DAMN.' en 2017 ?",
+          question:
+            "Complétez les paroles de 'Old Town Road' de Lil Nas X : 'I got the horses in the back, Horse tack is attached, Hat is matte black, Got the boots that's black to ______'",
           type: "text",
           options: [
-            { id: "a", text: "J. Cole" },
-            { id: "b", text: "Drake" },
-            { id: "c", text: "Kendrick Lamar" },
-            { id: "d", text: "Travis Scott" },
+            { id: "a", text: "the sky" },
+            { id: "b", text: "the top" },
+            { id: "c", text: "the bottom" },
+            { id: "d", text: "match" },
           ],
-          correctAnswer: "c",
+          correctAnswer: "d",
           explanation:
-            "Kendrick Lamar a sorti l'album 'DAMN.' en 2017, qui a remporté le prix Pulitzer de la musique.",
+            "La réponse correcte est 'match'. La chanson 'Old Town Road' est un énorme succès de Lil Nas X sorti en 2019.",
         },
         {
           id: 16,
@@ -258,17 +261,29 @@ export const quizData = {
         },
         {
           id: 18,
-          question: "Qui a chanté 'Blinding Lights' sorti en 2019 ?",
+          question:
+            "Complétez les paroles de 'Dernière Danse' d'Indila : 'Je remue le ciel, le jour, la nuit / Je danse avec le vent, la pluie...'",
           type: "text",
           options: [
-            { id: "a", text: "Post Malone" },
-            { id: "b", text: "Bruno Mars" },
-            { id: "c", text: "The Weeknd" },
-            { id: "d", text: "Justin Timberlake" },
+            {
+              id: "a",
+              text: "Qu'il neige ou qu'il vente et sous l'orage / Et je danse, danse, danse, danse / Danse, danse, danse",
+            },
+            {
+              id: "b",
+              text: "L'orage éclate, les grêlons tombent / Et je danse, danse, danse, danse / Danse, danse, danse",
+            },
+            {
+              id: "c",
+              text: "Un peu d’amour, un brin de miel / Et je danse, danse, danse, danse / Danse, danse, danse",
+            },
+            {
+              id: "d",
+              text: "Un peu d’humour, un grain de miel / Et je pense, pense, pense, pense / Pense, pense, pense",
+            },
           ],
           correctAnswer: "c",
-          explanation:
-            "The Weeknd a sorti 'Blinding Lights' en 2019, qui est devenu l'un des singles les plus populaires de tous les temps.",
+          explanation: "Premier succès d'Indila en 2014.",
         },
         {
           id: 19,
@@ -287,17 +302,29 @@ export const quizData = {
         {
           id: 20,
           question:
-            "Quel artiste a sorti 'Sunflower' pour le film Spider-Man: Into the Spider-Verse ?",
+            "Complétez les paroles de 'On dirait' d'Amir : 'On dirait, qu'on a tous un ange / On dirait, on dirait bien que c'est toi...'",
           type: "text",
           options: [
-            { id: "a", text: "Post Malone et Swae Lee" },
-            { id: "b", text: "Khalid et Normani" },
-            { id: "c", text: "Lil Nas X et Billy Ray Cyrus" },
-            { id: "d", text: "DJ Khaled et Justin Bieber" },
+            {
+              id: "a",
+              text: "On dirait, que dans ce monde étrange / On dirait, que j'ai toujours été là",
+            },
+            {
+              id: "b",
+              text: "On dirait, que dans ce monde étrange / On dirait, que t'as toujours été là",
+            },
+            {
+              id: "c",
+              text: "On dirait, que dans ce monde étrange / On dirait, que nous étions toujours là",
+            },
+            {
+              id: "d",
+              text: "On disait, que dans ce monde étrange / On disait, que t'as toujours été là",
+            },
           ],
-          correctAnswer: "a",
+          correctAnswer: "b",
           explanation:
-            "Post Malone et Swae Lee ont collaboré sur 'Sunflower' pour le film Spider-Man: Into the Spider-Verse en 2018.",
+            "Chanson qui a représenté la France à l'Eurovision 2016. Amir a terminé à la 6ème place.",
         },
         {
           id: 21,
@@ -359,17 +386,30 @@ export const quizData = {
         },
         {
           id: 25,
-          question: "Quel groupe a sorti la chanson 'Counting Stars' en 2013 ?",
+          question:
+            'Complétez les paroles d\'Andalouse de Kendji : "Toi, toi, ma belle Andalouse / Aussi belle que jalouse"...',
           type: "text",
           options: [
-            { id: "a", text: "Maroon 5" },
-            { id: "b", text: "OneRepublic" },
-            { id: "c", text: "Imagine Dragons" },
-            { id: "d", text: "Coldplay" },
+            {
+              id: "a",
+              text: "Quand j'te vois, le temps s'arrête / Je perds le nord, je perds la tête",
+            },
+            {
+              id: "b",
+              text: "Quand tu chantes, le temps s'arrête / Je perds le nord, je perds la tête",
+            },
+            {
+              id: "c",
+              text: "Quand tu danses, le temps s'arrête / J'suis à l'ouest, je perds la tête",
+            },
+            {
+              id: "d",
+              text: "Quand tu danses, le temps s'arrête / Je perds le nord, je perds la tête",
+            },
           ],
-          correctAnswer: "b",
+          correctAnswer: "d",
           explanation:
-            "OneRepublic a sorti 'Counting Stars' en 2013, devenu l'un de leurs plus grands succès.",
+            "En 2014, la France découvre l'un des plus gros succès de Kendji Girac, récent vainqueur de la Saison 3 de The Voice",
         },
         {
           id: 26,
@@ -415,17 +455,17 @@ export const quizData = {
         },
         {
           id: 29,
-          question: "Quel artiste a sorti 'Save Your Tears' en 2020 ?",
+          question:
+            'Complétez les paroles de cette chanson de La Reine des Neiges: "Libérée, délivrée / Je ne mentirai plus jamais..."',
           type: "text",
           options: [
-            { id: "a", text: "Justin Bieber" },
-            { id: "b", text: "The Weeknd" },
-            { id: "c", text: "Post Malone" },
-            { id: "d", text: "Drake" },
+            { id: "a", text: "Libérée, délivrée / Je tourne la page à jamais" },
+            { id: "b", text: "Libérée, délivrée / Rien ne m'arrête désormais" },
+            { id: "c", text: "Libérée, délivrée / C'est décidé, je m'en vais" },
+            { id: "d", text: "Libérée, délivrée / Plus rien ne m'empêchera" },
           ],
-          correctAnswer: "b",
-          explanation:
-            "The Weeknd a sorti 'Save Your Tears' en 2020 dans son album 'After Hours'.",
+          correctAnswer: "c",
+          explanation: "PITIÉ !!!!!!!!",
         },
         {
           id: 30,
@@ -954,18 +994,19 @@ export const quizData = {
         {
           id: 5,
           question:
-            "Quel est le premier album de Drake à atteindre la première place des charts américains ?",
+            "Complétez les paroles de cette chanson d’Angèle : « Balance ton quoi / Même si tu parles mal des filles… »",
           type: "text",
           options: [
-            { id: "a", text: "Thank Me Later" },
-            { id: "b", text: "Take Care" },
-            { id: "c", text: "Nothing Was the Same" },
-            { id: "d", text: "Views" },
+            { id: "a", text: "Je sais qu'au fond t’as compris" },
+            { id: "b", text: "Je sais même pas si t’as tout dit" },
+            { id: "c", text: "Je sais, c'est vrai, que t’as compris" },
+            { id: "d", text: "Tu sais, je sais que t’as menti" },
           ],
           correctAnswer: "a",
           explanation:
-            "Le premier album studio de Drake, 'Thank Me Later' (2010), a atteint la première place des charts américains.",
+            "La bonne réponse est : « Je sais qu'au fond t’as compris » dans « Balance ton quoi » d’Angèle (2019).",
         },
+
         {
           id: 6,
           question: "Combien de membres composent le groupe BLACKPINK ?",
@@ -1067,21 +1108,35 @@ export const quizData = {
           explanation:
             "'Dynamite' de BTS est devenue la première chanson d'un groupe de K-pop à atteindre la première place du Billboard Hot 100 en 2020.",
         },
+
         {
           id: 13,
           question:
-            "Qui a écrit la chanson 'Drivers License' d'Olivia Rodrigo ?",
+            "Complétez les paroles de cette chanson de Soprano : « Il est temps d'aller pousser, on a des rêves à soulever / Ta balance fait trop la gueule, il va falloir éliminer »",
           type: "text",
           options: [
-            { id: "a", text: "Olivia Rodrigo et Taylor Swift" },
-            { id: "b", text: "Olivia Rodrigo et Jack Antonoff" },
-            { id: "c", text: "Olivia Rodrigo et Dan Nigro" },
-            { id: "d", text: "Olivia Rodrigo et Max Martin" },
+            {
+              id: "a",
+              text: "Ne t'arrête pas quand t'as mal mais plutôt quand t'as tout donné",
+            },
+            {
+              id: "b",
+              text: "Prouve-moi que t'es une machine en enchaînant les fractionnés",
+            },
+            {
+              id: "c",
+              text: "Faut souffrir pour être beau, pour pas se faire photoshoper",
+            },
+            {
+              id: "d",
+              text: "On est sur le pied de guerre, on est pas venus déserter",
+            },
           ],
           correctAnswer: "c",
           explanation:
-            "Olivia Rodrigo a co-écrit 'Drivers License' avec Dan Nigro, qui l'a également produite.",
+            "La bonne réponse est : « Faut souffrir pour être beau, pour pas se faire photoshoper » dans « Le coach » de Soprano (2019)[3].",
         },
+
         {
           id: 14,
           question: "Quel artiste a sorti l'album 'Justice' en 2021 ?",
@@ -1170,16 +1225,17 @@ export const quizData = {
         {
           id: 20,
           question:
-            "Quel rappeur américain a sorti l'album 'Astroworld' en 2018 ?",
+            "Complétez les paroles de cette chanson d’Aya Nakamura : « Djadja, y a pas moyen Djadja… »",
           type: "text",
           options: [
-            { id: "a", text: "Drake" },
-            { id: "b", text: "Travis Scott" },
-            { id: "c", text: "Kendrick Lamar" },
-            { id: "d", text: "Post Malone" },
+            { id: "a", text: "J’suis pas ta catin Djadja" },
+            { id: "b", text: "J’suis pas ta copine Djadja" },
+            { id: "c", text: "J’suis pas ta copine Djadja" },
+            { id: "d", text: "J’suis pas ta cousine Djadja" },
           ],
-          correctAnswer: "b",
-          explanation: "Travis Scott a sorti l'album 'Astroworld' en 2018.",
+          correctAnswer: "a",
+          explanation:
+            "La bonne réponse est : « J’suis pas ta catin Djadja » dans « Djadja » d’Aya Nakamura (2018).",
         },
         {
           id: 21,
@@ -1240,20 +1296,33 @@ export const quizData = {
             "Le groupe italien Måneskin a remporté l'Eurovision 2021 avec la chanson 'Zitti e buoni'.",
         },
         {
-          id: 25,
+          id: 30,
           question:
-            "Quelle chanteuse a collaboré avec Lady Gaga sur 'Rain On Me' en 2020 ?",
+            "Complétez les paroles de cette chanson d’Orelsan : « Si le monsieur dort dehors / C'est qu'il aime le bruit des voitures...»",
           type: "text",
           options: [
-            { id: "a", text: "Ariana Grande" },
-            { id: "b", text: "Beyoncé" },
-            { id: "c", text: "Dua Lipa" },
-            { id: "d", text: "Billie Eilish" },
+            {
+              id: "a",
+              text: "S'il s'amuse à faire le mort / C'est qu'il joue avec les autobus",
+            },
+            {
+              id: "b",
+              text: "S'il s'amuse à faire la manche / C'est qu'il paie avec les raclures",
+            },
+            {
+              id: "c",
+              text: "S'il s'amuse à faire le mort / C'est qu'il joue avec les statues",
+            },
+            {
+              id: "d",
+              text: "S'il s'amuse à se faire du tort / C'est qu'il joue avec les voitures",
+            },
           ],
-          correctAnswer: "a",
+          correctAnswer: "b",
           explanation:
-            "Ariana Grande a collaboré avec Lady Gaga sur 'Rain On Me' en 2020, un single de l'album 'Chromatica'.",
+            "La bonne réponse est : « S'il s'amuse à faire le mort / C'est qu'il joue avec les statues » dans « Tout va bien » d’Orelsan (2017).",
         },
+
         {
           id: 26,
           question: "Quel titre populaire n'appartient PAS à Doja Cat ?",
